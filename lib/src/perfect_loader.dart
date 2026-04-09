@@ -3,9 +3,9 @@ import 'dart:ui' show PathMetric;
 
 import 'package:flutter/material.dart';
 
-/// Indeterminate progress: wavy ring + rotating segment (Play Store–like).
+/// Progression indéterminée : anneau ondulé + segment rotatif (style Play Store).
 ///
-/// No assets; all drawing via [CustomPaint]. Safe with zero / tiny layout.
+/// Pas d'assets ; tout le dessin via [CustomPaint]. Sûr avec une disposition nulle / minuscule.
 class PerfectLoader extends StatefulWidget {
   const PerfectLoader({
     super.key,
@@ -19,25 +19,25 @@ class PerfectLoader extends StatefulWidget {
   })  : assert(sweepFraction > 0 && sweepFraction <= 1),
         assert(waveCount > 2);
 
-  /// Width and height of the square bounds.
+  /// Largeur et hauteur des limites carrées.
   final double size;
 
-  /// Stroke width; if null, derived from [size].
+  /// Épaisseur du trait ; si null, dérivée de [size].
   final double? strokeWidth;
 
-  /// Foreground arc color.
+  /// Couleur de l'arc au premier plan.
   final Color activeColor;
 
-  /// Full ring (track) base color; painter applies extra opacity for contrast.
+  /// Couleur de base de l'anneau complet (piste) ; le peintre applique une opacité supplémentaire pour le contraste.
   final Color trackColor;
 
-  /// One full rotation of the active segment.
+  /// Une rotation complète du segment actif.
   final Duration duration;
 
-  /// Length of the highlighted arc as a fraction of perimeter (0–1].
+  /// Longueur de l'arc mis en évidence en fraction du périmètre (0–1].
   final double sweepFraction;
 
-  /// Number of scallops around the ring.
+  /// Nombre de scallops autour de l'anneau.
   final int waveCount;
 
   @override
@@ -129,7 +129,7 @@ class _WavyRingPainter extends CustomPainter {
     return path;
   }
 
-  /// [PathMetric.extractPath] uses absolute distance along contour for end, not length.
+  /// [PathMetric.extractPath] utilise la distance absolue le long du contour pour la fin, pas la longueur.
   Path _arcAlongContour(PathMetric metric, double startDist, double sweepDist) {
     final len = metric.length;
     if (len <= 0 || sweepDist <= 0) return Path();

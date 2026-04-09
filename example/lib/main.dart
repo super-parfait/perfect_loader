@@ -11,7 +11,7 @@ class ExampleApp extends StatelessWidget {
     return MaterialApp(
       title: 'perfect_loader',
       home: Scaffold(
-        appBar: AppBar(title: const Text('Play Store–style loader')),
+        appBar: AppBar(title: const Text('Chargeur parfait')),
         body: const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

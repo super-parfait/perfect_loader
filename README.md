@@ -1,15 +1,15 @@
 # perfect_loader
 
-Indeterminate **circular progress** with a **scalloped (wavy) ring**, similar in spirit to the Google Play Store install animation. Implemented with `CustomPaint` only (no images).
+Indicateur de progression circulaire indéterminé avec un anneau ondulé (scalloped), similaire à l'animation d'installation du Google Play Store. Implémenté uniquement avec `CustomPaint` (pas d'images).
 
-## Install
+## Installation
 
 ```yaml
 dependencies:
   perfect_loader: ^0.1.0
 ```
 
-## Usage
+## Utilisation
 
 ```dart
 import 'package:perfect_loader/perfect_loader.dart';
@@ -21,43 +21,43 @@ const PerfectLoader(
 )
 ```
 
-### Parameters
+### Paramètres
 
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| `size` | `56` | Square width/height. |
-| `strokeWidth` | auto | Ring thickness; derived from `size` if omitted. |
-| `activeColor` | Play blue | Rotating arc. |
-| `trackColor` | Light blue | Full wavy track (slightly transparent when painted). |
-| `duration` | 1400 ms | One rotation of the arc. |
-| `sweepFraction` | `0.38` | Arc length as fraction of perimeter. |
-| `waveCount` | `16` | Number of scallops. |
+| Paramètre | Défaut | Description |
+|-----------|--------|-------------|
+| `size` | `56` | Largeur/hauteur carrée. |
+| `strokeWidth` | auto | Épaisseur de l'anneau ; dérivée de `size` si omis. |
+| `activeColor` | Bleu Play | Arc rotatif. |
+| `trackColor` | Bleu clair | Anneau ondulé complet (légèrement transparent lors du dessin). |
+| `duration` | 1400 ms | Une rotation complète de l'arc. |
+| `sweepFraction` | `0.38` | Longueur de l'arc en fraction du périmètre. |
+| `waveCount` | `16` | Nombre de scallops. |
 
-## Publishing to pub.dev
+## Publication sur pub.dev
 
-1. Replace `USERNAME` in `pubspec.yaml` (`homepage`, `repository`, `issue_tracker`) with your GitHub (or remove `homepage` / point to pub package page).
-2. Run `dart pub publish --dry-run`, then `dart pub publish`.
-3. Ensure you have verified publisher on pub.dev.
+1. Remplacez `USERNAME` dans `pubspec.yaml` (`homepage`, `repository`, `issue_tracker`) par votre nom d'utilisateur GitHub (ou supprimez `homepage` / pointez vers la page du package pub).
+2. Exécutez `dart pub publish --dry-run`, puis `dart pub publish`.
+3. Assurez-vous d'avoir un éditeur vérifié sur pub.dev.
 
-## Integrating into an existing app (e.g. Dughu)
+## Intégration dans une application existante (ex. Dughu)
 
-1. Add the dependency (path while developing, then pub.dev):
+1. Ajoutez la dépendance (chemin local pendant le développement, puis pub.dev) :
 
    ```yaml
    dependencies:
      perfect_loader:
-       path: ../perfect_loader  # adjust
+       path: ../perfect_loader  # ajustez
    ```
 
-2. Replace the local widget import with  
-   `package:play_store_wavy_loader/play_store_wavy_loader.dart`.
+2. Remplacez l'import du widget local par  
+   `package:perfect_loader/perfect_loader.dart`.
 
-3. Rename `PlayStoreWavyVideoLoader` → `PlayStoreWavyLoader` (or wrap once in your app).
+3. Renommez `PlayStoreWavyLoader` → `PerfectLoader` (ou enveloppez une fois dans votre app).
 
-4. Pass your brand colors, e.g.  
+4. Passez vos couleurs de marque, ex.  
    `activeColor: Color(0xFFB66B34)`,  
    `trackColor: Color.lerp(thatColor, Colors.white, 0.48)!`.
 
-## License
+## Licence
 
-MIT — see [LICENSE](LICENSE).
+MIT — voir [LICENSE](LICENSE).

@@ -1,6 +1,6 @@
-# Changelog
+# Journal des modifications
 
 ## 0.1.0
 
-- Initial release: wavy / scalloped ring with rotating arc segment.
-- Customizable size, colors, stroke, duration, sweep fraction, wave count.
+- Version initiale : anneau ondulé / scalloped avec segment d'arc rotatif.
+- Taille, couleurs, trait, durée, fraction de balayage, nombre d'ondes personnalisables.
