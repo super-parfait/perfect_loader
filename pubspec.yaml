@@ -1,0 +1,24 @@
+name: perfect_loader
+description: >
+  Indeterminate circular progress with a scalloped (wavy) ring, inspired by
+  the Play Store install animation. Pure Flutter CustomPaint, no assets.
+version: 0.1.0
+homepage: https://github.com/USERNAME/perfect_loader
+repository: https://github.com/USERNAME/perfect_loader
+issue_tracker: https://github.com/USERNAME/perfect_loader/issues
+
+environment:
+  sdk: ^3.5.0
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: false
